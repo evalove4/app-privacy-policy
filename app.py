@@ -22,7 +22,7 @@ if os.path.exists(apk_file_path):
         btn = st.download_button(
             label="👉 안드로이드 앱 다운로드 (클릭)",
             data=file,
-            file_name="apt_app_v1.0.apk",
+            file_name="GCHills_parkingfinder_app_v1.0.apk",
             mime="application/vnd.android.package-archive",
             use_container_width=True,
             type="primary"
