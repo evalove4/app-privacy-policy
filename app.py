@@ -23,7 +23,7 @@ if os.path.exists(apk_file_path):
         btn = st.download_button(
             label="👉 안드로이드 앱 다운로드 (클릭)",
             data=file,
-            file_name=apk_file_path
+            file_name=apk_file_path,
             mime="application/vnd.android.package-archive",
             use_container_width=True,
             type="primary"
