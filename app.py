@@ -3,10 +3,10 @@ import streamlit as st
 import os
 
 # 1. 페이지 설정
-st.set_page_config(page_title="광천 Hills 주차위치 표시기 다운로드", page_icon="🏢", layout="wide")
+st.set_page_config(page_title="광천 Hills 주차위치 Scanner 다운로드", page_icon="🏢", layout="wide")
 
 # 2. 헤더 및 앱 소개
-st.title("🏢 광천 Hills 주차위치 Finder 앱 다운로드")
+st.title("🏢 광천 Hills 주차위치 Scanner 앱 다운로드")
 st.info("이 앱은 명품 광천힐스테이트 입주민들의 주차장 위치 확인을 위해 제작되었습니다.")
 
 st.markdown("---")
@@ -15,7 +15,7 @@ st.markdown("---")
 st.header("📥 앱 다운로드 및 설치")
 st.info("Version 260103 - 2026년 1월 3일 배포")
 
-apk_file_path = "광천HillsParking-release.apk"
+apk_file_path = "app-release_2601041.apk"
 
 # 파일이 있는지 확인 후 버튼 표시
 if os.path.exists(apk_file_path):
@@ -23,7 +23,7 @@ if os.path.exists(apk_file_path):
         btn = st.download_button(
             label="👉 안드로이드 앱 다운로드 (클릭)",
             data=file,
-            file_name="GCHills_parkingfinder_app_v1.0.apk",
+            file_name=apk_file_path
             mime="application/vnd.android.package-archive",
             use_container_width=True,
             type="primary"
@@ -61,9 +61,11 @@ content = """
 
 * 2. App에서 저장하는 항목
 
-    (1) 사전에 지정된 주차위치 Beacon 고유정보(4글자 / 예시 "0000")
+    (1) 사전에 지정된 ESP32-u 고유정보(4글자 / 예시 "0000")
 
     (2) Scan 된 주차위치 기록(최대 10개)
+
+    (3) 기타 앱 설정 정보
 
     해당 자료는 외부로 전송되거나 공유되지 않습니다. 
 
@@ -88,5 +90,5 @@ content = """
 st.markdown(content)
 
 # 5. 하단 푸터
-st.caption("© 2026 입주민 102-204. All rights reserved.")
+st.caption("© 2026 광천힐스 입주민. All rights reserved.")
 
