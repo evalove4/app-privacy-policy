@@ -13,9 +13,9 @@ st.markdown("---")
 
 # 3. [핵심] APK 다운로드 섹션
 st.header("📥 앱 다운로드 및 설치")
-st.info("Version 260103 - 2026년 1월 3일 배포")
+st.info("Version 260104 - 2026년 1월 4일 배포")
 
-apk_file_path = "app-release_2601041.apk"
+apk_file_path = "app-release_2601042.apk"
 
 # 파일이 있는지 확인 후 버튼 표시
 if os.path.exists(apk_file_path):
